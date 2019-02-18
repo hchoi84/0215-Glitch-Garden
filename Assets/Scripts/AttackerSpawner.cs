@@ -19,7 +19,7 @@ public class AttackerSpawner : MonoBehaviour
             float spawnDuration = Random.Range(spawnDurationMin, spawnDurationMax);
             yield return new WaitForSeconds(spawnDuration);
             GameObject attacker = Instantiate(lizardPrefab, transform.position, Quaternion.identity);
-            attacker.transform.parent = gameObject.transform;
+            attacker.transform.parent = this.gameObject.transform;
         }
     }
 

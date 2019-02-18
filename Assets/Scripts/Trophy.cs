@@ -14,7 +14,6 @@ public class Trophy : MonoBehaviour
         trophyBasePosX = trophyBase.transform.position.x;
     }
 
-    // Update is called once per frame
     void Update()
     {
         ShakeTrophyBase();

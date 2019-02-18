@@ -2,7 +2,7 @@
 
 public class DefenderButton : MonoBehaviour
 {
-    [SerializeField] Defender defenderPrefab;
+    [SerializeField] Defender defenderPrefab = default;
 
     private void OnMouseDown()
     {
