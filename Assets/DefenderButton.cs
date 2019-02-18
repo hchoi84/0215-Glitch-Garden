@@ -2,6 +2,7 @@
 
 public class DefenderButton : MonoBehaviour
 {
+    [SerializeField] Defender defenderPrefab;
 
     private void OnMouseDown()
     {
@@ -11,5 +12,6 @@ public class DefenderButton : MonoBehaviour
             defenderButton.GetComponent<SpriteRenderer>().color = Color.black;
         }
         GetComponent<SpriteRenderer>().color = Color.white;
+        FindObjectOfType<DefenderSpawner>().SetSelectedDefender(defenderPrefab);
     }
 }

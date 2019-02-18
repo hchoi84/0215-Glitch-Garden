@@ -2,7 +2,7 @@
 
 public class DefenderSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject cactus = default;
+    private Defender defender = default;
 
     private void OnMouseDown()
     {
@@ -13,6 +13,11 @@ public class DefenderSpawner : MonoBehaviour
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 roundPos = new Vector2(Mathf.RoundToInt(mousePos.x), Mathf.RoundToInt(mousePos.y));
-        Instantiate(cactus, new Vector3(roundPos.x, roundPos.y, -1), Quaternion.identity);
+        Instantiate(defender, new Vector3(roundPos.x, roundPos.y, -1), Quaternion.identity);
+    }
+
+    public void SetSelectedDefender(Defender defenderToSelect)
+    {
+        defender = defenderToSelect;
     }
 }
