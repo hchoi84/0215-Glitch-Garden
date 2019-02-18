@@ -1,0 +1,2 @@
+This is a project from Udemy's Unity 2D Course.
+I've following the same procedure from the lesson but putting my own code either from memory or codes I've learned elsewhere to my own personal touch to it.
