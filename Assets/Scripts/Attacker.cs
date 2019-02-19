@@ -7,24 +7,26 @@ public class Attacker : MonoBehaviour
     Animator animator;
 
     private void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
+    { animator = GetComponent<Animator>(); }
 
     void Update()
     {
-        transform.Translate(Vector2.left * Time.deltaTime * moveSpeed);
+        MoveLeft();
+        StopAttackAnimation();
+    }
+
+    private void MoveLeft()
+    { transform.Translate(Vector2.left * Time.deltaTime * moveSpeed); }
+
+    private void StopAttackAnimation()
+    {
         if (!currentTarget)
-        {
-            animator.SetBool("isAttacking", false);
-        }
+        { animator.SetBool("isAttacking", false); }
     }
 
     // This method is called from Animation
     public void SetMovementSpeed(float speed)
-    {
-        moveSpeed = speed;
-    }
+    { moveSpeed = speed; }
 
     //Called from Lizard.cs
     public void Attack(Defender target)
@@ -38,9 +40,7 @@ public class Attacker : MonoBehaviour
     {
         Health health = currentTarget.GetComponent<Health>();
         if (health)
-        {
-            health.TakeDamage(damage);
-        }
+        { health.TakeDamage(damage); }
         else { return; }
     }
 }

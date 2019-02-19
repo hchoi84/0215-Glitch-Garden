@@ -43,5 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab479715f1513a4caa872fb67ad9585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lizardPrefab: {fileID: 8260175189057665992, guid: efaba63978060b8449f260d94195e69a,
-    type: 3}
+  attackers:
+  - {fileID: 218451391574508915, guid: c0fe3e0c64f995040aa695b442949ecb, type: 3}
+  - {fileID: 247753825, guid: efaba63978060b8449f260d94195e69a, type: 3}
