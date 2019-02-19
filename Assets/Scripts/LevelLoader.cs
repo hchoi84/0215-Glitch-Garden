@@ -16,14 +16,29 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
+    private IEnumerator SplashToMenuDelay()
+    {
+        yield return new WaitForSeconds(splashToMenuDelay);
+        LoadNextScene();
+    }
+
+    public void LoadGame()
+    {
+        SceneManager.LoadScene(2);
+    }
+
     public void LoadNextScene()
     {
         SceneManager.LoadScene(buildIndex + 1);
     }
 
-    private IEnumerator SplashToMenuDelay()
+    public void LoadGameOverScene()
     {
-        yield return new WaitForSeconds(splashToMenuDelay);
-        LoadNextScene();
+        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
