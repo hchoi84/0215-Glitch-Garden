@@ -181,6 +181,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 549f681b60b33f94ab70028da50f22c0, type: 3}
+--- !u!114 &11214163 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3614973626820754137, guid: 549f681b60b33f94ab70028da50f22c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 11214162}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4cdc858cf7eee42a66417c910ec52c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &99882256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1230,6 +1242,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Win Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6485010368251714018, guid: de21b373c4448cd458a32898a5f98587,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3674576771100116743, guid: de21b373c4448cd458a32898a5f98587,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1359,6 +1376,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lose Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2421936364356564142, guid: 90d486119ad21ba43b56034785bc04fd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2421936364356564138, guid: 90d486119ad21ba43b56034785bc04fd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1478,11 +1500,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 11214163}
+    - target: {fileID: 2421936365175232608, guid: 90d486119ad21ba43b56034785bc04fd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 2421936364947024358, guid: 90d486119ad21ba43b56034785bc04fd,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 11214163}
+    - target: {fileID: 2421936364947024358, guid: 90d486119ad21ba43b56034785bc04fd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMainMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90d486119ad21ba43b56034785bc04fd, type: 3}

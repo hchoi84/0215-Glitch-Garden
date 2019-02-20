@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using System;
 
 public class LivesDisplay : MonoBehaviour
 {
@@ -11,6 +12,19 @@ public class LivesDisplay : MonoBehaviour
     {
         livesText = GetComponent<TextMeshProUGUI>();
         levelController = FindObjectOfType<LevelController>();
+        SetLives();
+    }
+
+    private void SetLives()
+    {
+        if(PlayerPrefsController.GetDifficulty() == 0)
+        {
+            lives = 10;
+        }
+        else
+        {
+            lives -= (int)(PlayerPrefsController.GetDifficulty() * 2);
+        }
     }
 
     private void Update()
@@ -27,6 +41,7 @@ public class LivesDisplay : MonoBehaviour
         livesText.text = lives.ToString();
     }
 
+    //Called from LoseCollider.cs
     public void SubtractLives()
     {
         lives--;

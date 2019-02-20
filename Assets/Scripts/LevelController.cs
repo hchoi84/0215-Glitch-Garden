@@ -7,6 +7,7 @@ public class LevelController : MonoBehaviour
     private int attackerSpawners = default;
     [SerializeField] GameObject winCanvas = default;
     [SerializeField] GameObject loseCanvas = default;
+    private bool gameLost = false;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class LevelController : MonoBehaviour
 
     private void Update()
     {
-        if (finishedSpawner == attackerSpawners)
+        if (!gameLost && finishedSpawner == attackerSpawners)
         {
             StartCoroutine(HandleWinCondition());
         }
@@ -37,12 +38,12 @@ public class LevelController : MonoBehaviour
     {
         Time.timeScale = 0f;
         loseCanvas.SetActive(true);
+        gameLost = true;
     }
 
     //Called from AttackerSpawner
     public void FinishedSpawnerLane()
     {
         finishedSpawner++;
-        Debug.Log(finishedSpawner);
     }
 }
