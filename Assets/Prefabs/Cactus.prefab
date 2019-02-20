@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af465c19d187954fbb021ee937329fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starCost: 150
+  starCost: 75
 --- !u!114 &6847021356382041210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43250579a98141642a286a430cf39f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 75
   explosionParticleSystem: {fileID: 5016376395608772691, guid: 8caa4a7e600578347b239f4856a9b7d5,
     type: 3}

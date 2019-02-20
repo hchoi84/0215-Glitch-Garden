@@ -88,11 +88,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6114028743966128978}
-  - component: {fileID: 5302308164290969850}
-  - component: {fileID: 2401816217585181196}
-  - component: {fileID: 8213388589590210203}
   - component: {fileID: 6153619964333602257}
+  - component: {fileID: 8213388589590210203}
+  - component: {fileID: 2401816217585181196}
   - component: {fileID: 731811948018486488}
+  - component: {fileID: 5302308164290969850}
   m_Layer: 0
   m_Name: Gnome
   m_TagString: Untagged
@@ -115,34 +115,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5302308164290969850
-MonoBehaviour:
+--- !u!95 &6153619964333602257
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4673026003534623151}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40dd56e473d46074e81b01f4d86f95f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1958337568666344212, guid: 68e7dc1a0ae9d7c45bb8017b7efe49fb,
-    type: 3}
-  projectilePos: {fileID: 103200325096098181}
---- !u!114 &2401816217585181196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4673026003534623151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7af465c19d187954fbb021ee937329fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  starCost: 200
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 33b1043778c0ee14aa36cd72f77272b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &8213388589590210203
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -169,25 +160,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.98682237}
   m_EdgeRadius: 0
---- !u!95 &6153619964333602257
-Animator:
-  serializedVersion: 3
+--- !u!114 &2401816217585181196
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4673026003534623151}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 33b1043778c0ee14aa36cd72f77272b2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af465c19d187954fbb021ee937329fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starCost: 150
 --- !u!114 &731811948018486488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,3 +187,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   explosionParticleSystem: {fileID: 0}
+--- !u!114 &5302308164290969850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4673026003534623151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40dd56e473d46074e81b01f4d86f95f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 1958337568666344212, guid: 68e7dc1a0ae9d7c45bb8017b7efe49fb,
+    type: 3}
+  projectilePos: {fileID: 103200325096098181}
