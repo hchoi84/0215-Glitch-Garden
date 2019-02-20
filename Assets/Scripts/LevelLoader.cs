@@ -22,9 +22,19 @@ public class LevelLoader : MonoBehaviour
         LoadNextScene();
     }
 
-    public void LoadGame()
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void LoadOptionMenue()
     {
         SceneManager.LoadScene(2);
+    }
+
+    public void LoadGame()
+    {
+        SceneManager.LoadScene(3);
     }
 
     public void LoadNextScene()
@@ -40,5 +50,10 @@ public class LevelLoader : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(buildIndex);
     }
 }

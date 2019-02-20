@@ -8,10 +8,12 @@ public class AttackerSpawner : MonoBehaviour
     private float spawnDurationMin = 2f, spawnDurationMax = 5f;
     private LevelController levelController;
     [SerializeField] private Attacker[] attackerArray = default;
+    IEnumerator spawnAttacker;
 
     private void Start()
     {
-        StartCoroutine(SpawnAttacker());
+        spawnAttacker = SpawnAttacker();
+        StartCoroutine(spawnAttacker);
         spawn = true;
         levelController = FindObjectOfType<LevelController>();
     }
@@ -40,5 +42,6 @@ public class AttackerSpawner : MonoBehaviour
     public void Spawn()
     {
         spawn = !spawn;
+        StopCoroutine(spawnAttacker);
     }
 }

@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1553052838693237658}
   - component: {fileID: 1553052838693237657}
+  - component: {fileID: 779879514915266487}
   m_Layer: 0
-  m_Name: Level Loader
+  m_Name: Level Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,3 +44,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4cdc858cf7eee42a66417c910ec52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &779879514915266487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553052838693237656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d7489b657b20640aca61bf9be2dbe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winCanvas: {fileID: 6485010368251714018, guid: de21b373c4448cd458a32898a5f98587,
+    type: 3}
+  loseCanvas: {fileID: 2421936364356564142, guid: 90d486119ad21ba43b56034785bc04fd,
+    type: 3}

@@ -5,10 +5,12 @@ public class LivesDisplay : MonoBehaviour
 {
     private TextMeshProUGUI livesText = default;
     private int lives = 10;
+    private LevelController levelController;
 
     private void Start()
     {
         livesText = GetComponent<TextMeshProUGUI>();
+        levelController = FindObjectOfType<LevelController>();
     }
 
     private void Update()
@@ -16,7 +18,7 @@ public class LivesDisplay : MonoBehaviour
         DisplayLives();
         if(lives <= 0)
         {
-            FindObjectOfType<LevelLoader>().LoadGameOverScene();
+            levelController.HandleLoseCondition();
         }
     }
 
